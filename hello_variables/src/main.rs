@@ -35,11 +35,11 @@ const GLOBAL_CONSTANT: u32 = 60 * 60 * 3;
  * using keyword let to bind a different value or even a different data type
  */
 fn shadowing() {
-    let x = 5;
-    let x = x + 1;
+    let x = 5; // creats variable x and binds 5
+    let x = x + 1; // creates another variable x and stores 6
 
     {
-        let x = x * x;
+        let x = x * x; // creates another variable and binds 36
         println!("\nInner scope x value: {x}")
     }
     println!("Outer scope x value: {x}")
