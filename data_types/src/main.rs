@@ -1,3 +1,4 @@
+
 /**
  * Rust has two data types: 
  * - scalar: stores single values; They are 4 types: integer, floating point number, Boolean, character
@@ -23,4 +24,15 @@ fn main() {
  */
 fn interger_representation() {
     let _x: u32 = "42".parse().expect("Expected a number");
+
+    let num: u8 = 32_u8.wrapping_add(230);
+    println!("Wrapped sum of 32 and 230 = {num}");
+
+    let num: (u8, bool) = 32_u8.overflowing_add(230);
+    println!("Wrapped sum of 32 and 230 = {:?}", num);
+
+    if num.1 {
+        let num: u16 = 255_u16 + (num.0 as u16);
+        println!("Wrapped sum of 32 and 230 = {:?}", num);
+    }
 }
