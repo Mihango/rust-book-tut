@@ -97,7 +97,7 @@ fn binary_search_iter(arr: &[u32], target: u32) -> i32 {
         }
     }
 
-    return -1;
+    -1
 }
 
 fn binary_search_rec(arr: &[u32], target: u32, mut start: usize, mut end: usize) -> i32 {
@@ -115,5 +115,5 @@ fn binary_search_rec(arr: &[u32], target: u32, mut start: usize, mut end: usize)
         end = mid -1;
     }
 
-    return binary_search_rec(arr, target, start, end);
+    binary_search_rec(arr, target, start, end)
 }
